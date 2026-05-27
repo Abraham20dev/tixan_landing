@@ -29,12 +29,11 @@ header {
   border-bottom: 1px solid #1f2937;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #10b981;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.tixan-logo {
+  height: 3rem;
+  width: auto;
+  display: block;
+}
 }
 
 nav a {
