@@ -9,7 +9,30 @@
 </head>
 <body>
   <header>
-    <div class="logo">TIXAN</div>
+        <svg class="tixan-logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+      <text x="10" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">T</text>
+      <text x="60" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">I</text>
+      <defs>
+        <linearGradient id="xGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00e5ff"/>
+          <stop offset="100%" stop-color="#00a8b5"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
+      <text x="110" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="url(#xGradient)" filter="url(#glow)" letter-spacing="2">X</text>
+      <line x1="105" y1="62" x2="105" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+      <line x1="107" y1="62" x2="107" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+      <line x1="109" y1="62" x2="109" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+      <text x="170" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">A</text>
+      <text x="220" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">N</text>
+      <line x1="10" y1="72" x2="270" y2="72" stroke="#00e5ff" stroke-width="2" opacity="0.4"/>
+    </svg>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
