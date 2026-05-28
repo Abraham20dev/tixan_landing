@@ -34,7 +34,7 @@ if (window.location.pathname.includes('download')) {
       .then(data => {
         const version = data.tag_name.replace('v', '');
         const releaseDate = new Date(data.published_at).toLocaleDateString();
-        const asset = data.assets.find(a => a.name.endsWith('.exe'));
+        const asset = data.assets.find(a => a.name.endsWith('.zip'));
         if (asset) {
           const sizeMB = (asset.size / (1024*1024)).toFixed(1);
           infoContainer.innerHTML = `
@@ -43,8 +43,9 @@ if (window.location.pathname.includes('download')) {
             <p>Size: <span>${sizeMB} MB</span></p>
           `;
           downloadBtn.href = asset.browser_download_url;
+          downloadBtn.textContent = 'Download for Windows (ZIP)';
         } else {
-          infoContainer.innerHTML = `<p>No executable found in the latest release.</p>`;
+          infoContainer.innerHTML = `<p>No ZIP file found in the latest release.</p>`;
         }
       })
       .catch(err => {
