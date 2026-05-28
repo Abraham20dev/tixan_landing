@@ -34,6 +34,24 @@ header {
   width: auto;
   display: block;
 }
+
+/* Hamburger menu (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #d1d5db;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -97,6 +115,25 @@ footer a:hover { color: #10b981; }
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Screenshot showcase ===== */
+.screenshot-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+.screenshot {
+  max-width: 350px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+.screenshot:hover {
+  transform: scale(1.03);
 }
 
 /* ===== Buttons ===== */
@@ -178,6 +215,14 @@ footer a:hover { color: #10b981; }
   border-radius: 8px;
   border: 1px solid #374151;
 }
+.release-info {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+.release-info span {
+  color: #10b981;
+  font-weight: bold;
+}
 
 /* ===== Contact Form ===== */
 .contact-form {
@@ -215,8 +260,16 @@ footer a:hover { color: #10b981; }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  header { flex-direction: column; }
-  nav { margin-top: 1rem; }
-  nav a { margin: 0 0.5rem; }
+  header { flex-direction: row; flex-wrap: wrap; }
+  .hamburger { display: flex; }
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(17,24,39,0.95);
+    margin-top: 1rem;
+  }
+  nav.show { display: flex; }
+  nav a { margin: 0.5rem 0; }
   .hero h1 { font-size: 2.5rem; }
 }
