@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download — TIXAN</title>
+  <title>Contact — TIXAN</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-     <svg class="tixan-logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+    <svg class="tixan-logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
       <text x="10" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">T</text>
       <text x="60" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">I</text>
       <defs>
@@ -35,25 +35,59 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="features.html">Features</a>
-      <a href="download.html" class="active">Download</a>
-      <a href="contact.html">Contact</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
   <section class="section">
-    <h2>Download TIXAN</h2>
-    <div class="download-details fade-in">
-      <div id="release-info" class="release-info">
-        <p>Fetching latest release…</p>
-      </div>
-      <a id="download-btn" href="#" class="btn">Download for Windows</a>
-      <p style="margin-top:1rem; font-size:0.85rem;">Windows 10/11, 64‑bit. Self‑contained, no installation required.</p>
+    <h2>Get in touch</h2>
+    <div class="contact-form fade-in">
+      <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p style="text-align:center; margin-top:1rem; font-size:0.85rem; color:#9ca3af;">
+        Or email us directly: <a href="mailto:your-email@example.com">ngenoabraham001@gmail.com</a>
+      </p>
     </div>
   </section>
 
   <footer>
-    <!-- Same footer as index -->
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="features.html">Features</a> |
+      <a href="download.html">Download</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2025 TIXAN. Built for engineers, by engineers.</p>
+    <p><small>This site does not use cookies or collect personal data.</small></p>
   </footer>
+
   <script src="script.js"></script>
+  <script>
+    // Handle contact form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();  // stop page reload
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      // Build mailto link
+      var subject = encodeURIComponent('TIXAN Contact from ' + name);
+      var body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        'Message:\n' + message
+      );
+      var mailto = 'mailto:your-email@example.com?subject=' + subject + '&body=' + body;
+
+      // Open email client (works in most browsers)
+      window.location.href = mailto;
+    });
+  </script>
 </body>
 </html>
