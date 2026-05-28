@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,10 +48,13 @@
         <input type="text" id="name" name="name" placeholder="Your name" required>
         <input type="email" id="email" name="email" placeholder="Your email" required>
         <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <button type="submit" class="btn" id="submit-btn">Copy Email & Message</button>
       </form>
-      <p style="text-align:center; margin-top:1rem; font-size:0.85rem; color:#9ca3af;">
-        Or email us directly: <a href="mailto:your-email@example.com">ngenoabraham001@gmail.com</a>
+      <p id="status-message" style="text-align:center; margin-top:1rem; font-size:0.9rem; color:#10b981; display:none;">
+        ✅ Email address copied! Send your message to <strong>ngenoabraham001@gmail.com</strong>
+      </p>
+      <p style="text-align:center; margin-top:0.5rem; font-size:0.85rem; color:#9ca3af;">
+        Or email us directly: <a href="mailto:ngenoabraham001@gmail.com">ngenoabraham001@gmail.com</a>
       </p>
     </div>
   </section>
@@ -67,27 +71,33 @@
     <p><small>This site does not use cookies or collect personal data.</small></p>
   </footer>
 
-  <script src="script.js"></script>
   <script>
-    // Handle contact form submission
+    // Your real email address
+    const contactEmail = 'ngenoabraham001@gmail.com';
+
     document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();  // stop page reload
-      var name = document.getElementById('name').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var message = document.getElementById('message').value.trim();
+      e.preventDefault();
 
-      // Build mailto link
-      var subject = encodeURIComponent('TIXAN Contact from ' + name);
-      var body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        'Message:\n' + message
-      );
-      var mailto = 'mailto:ngenoabraham001@gmail.com?subject=' + subject + '&body=' + body;
+      // Copy the email address to clipboard
+      navigator.clipboard.writeText(contactEmail).then(function() {
+        // Show success message
+        const statusMsg = document.getElementById('status-message');
+        statusMsg.innerHTML = '✅ Email address copied! Send your message to <strong>' + contactEmail + '</strong>';
+        statusMsg.style.display = 'block';
 
-      // Open email client (works in most browsers)
-      window.location.href = mailto;
+        // Change button text briefly
+        const btn = document.getElementById('submit-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function() {
+          btn.textContent = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        // Fallback if clipboard fails
+        alert('Unable to copy automatically. Please email us at: ' + contactEmail);
+      });
     });
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
