@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIXAN — Manufacturing Intelligence</title>
+  <title>TIXAN – Deterministic Manufacturing Intelligence</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-        <svg class="tixan-logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+    <svg class="tixan-logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
       <text x="10" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">T</text>
       <text x="60" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">I</text>
       <defs>
@@ -26,13 +26,11 @@
         </filter>
       </defs>
       <text x="110" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="url(#xGradient)" filter="url(#glow)" letter-spacing="2">X</text>
-      <line x1="105" y1="62" x2="105" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
-      <line x1="107" y1="62" x2="107" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
-      <line x1="109" y1="62" x2="109" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
       <text x="170" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">A</text>
       <text x="220" y="58" font-family="'Inter', 'JetBrains Mono', sans-serif" font-weight="800" font-size="52" fill="#c9d1d9" letter-spacing="2">N</text>
       <line x1="10" y1="72" x2="270" y2="72" stroke="#00e5ff" stroke-width="2" opacity="0.4"/>
     </svg>
+    <div class="hamburger"><span></span><span></span><span></span></div>
     <nav>
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -43,10 +41,39 @@
   </header>
 
   <section class="hero">
-    <h1>TIXAN</h1>
-    <p>Manufacturing Intelligence, Face by Face.</p>
-    <p style="font-size:1rem; color:#6b7280;">Your STEP file, analyzed in seconds. Every face, explained.</p>
-    <a href="download.html" class="btn">Get TIXAN</a>
+    <h1>Deterministic Manufacturing Intelligence</h1>
+    <p>Offline. Face‑level. Process‑aware. No AI. No cloud. Just geometry you can verify.</p>
+    <a href="download.html" class="btn">Download for Windows</a>
+  </section>
+
+  <section class="section">
+    <h2>See it in action</h2>
+    <div class="screenshot-container">
+      <img src="screenshots/dashboard.png" alt="Dashboard" class="screenshot fade-in">
+      <img src="screenshots/viewer.png" alt="3D Heatmap" class="screenshot fade-in">
+      <img src="screenshots/report.png" alt="Report" class="screenshot fade-in">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Trusted by engineers worldwide</h2>
+    <div class="feature-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔍</div>
+        <h3>Face‑Level Traceability</h3>
+        <p>Every issue links to a specific CAD face with an exact measurement.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🛡️</div>
+        <h3>13 Manufacturing Detectors</h3>
+        <p>Thin walls, holes, pockets, undercuts, draft angles, ribs, bosses, and more.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">⚙️</div>
+        <h3>5 Process Modes</h3>
+        <p>Machining, Molding, Casting, Sheet Metal, Additive. Each with custom thresholds.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
