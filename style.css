@@ -30,8 +30,8 @@ header {
 }
 
 .tixan-logo {
-  height: 4rem;
-  width: auto;
+  height: 5rem;
+  max-width: 100%;
   display: block;
 }
 
