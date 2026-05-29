@@ -44,6 +44,15 @@ if (window.location.pathname.includes('download')) {
           `;
           downloadBtn.href = asset.browser_download_url;
           downloadBtn.textContent = 'Download for Windows (ZIP)';
+
+          // ── TRACK DOWNLOAD CLICK ──
+          downloadBtn.addEventListener('click', () => {
+            gtag('event', 'download', {
+              'event_category': 'engagement',
+              'event_label': 'TIXAN_Windows_Download',
+              'value': 1
+            });
+          });
         } else {
           infoContainer.innerHTML = `<p>No ZIP file found in the latest release.</p>`;
         }
