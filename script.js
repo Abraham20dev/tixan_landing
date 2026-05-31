@@ -20,7 +20,7 @@ if (hamburger && nav) {
 
 // Fetch latest release from GitHub (runs only on download page)
 if (window.location.pathname.includes('download')) {
-  const repo = 'Abraham20dev/TIXAN';   // <-- changed to desktop app repo
+  const repo = 'Abraham20dev/tixan_landing';   // <-- changed to desktop app repo
   const releaseUrl = `https://api.github.com/repos/${repo}/releases/latest`;
   const infoContainer = document.getElementById('release-info');
   const downloadBtn = document.getElementById('download-btn');
