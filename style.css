@@ -317,10 +317,10 @@ footer a:hover { color: #10b981; }
   margin: 0;
 }
 
-/* Make video controls look good on dark background */
+/* Make video background dark so default controls remain visible */
 video {
-  background: #000;
+  background: #111827;   /* matches the site's background */
+  outline: none;
 }
-video::-webkit-media-controls {
   filter: invert(1);
 }
