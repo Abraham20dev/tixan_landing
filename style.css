@@ -273,3 +273,54 @@ footer a:hover { color: #10b981; }
   nav a { margin: 0.5rem 0; }
   .hero h1 { font-size: 2.5rem; }
 }
+
+/* ── Screenshot & Video Galleries ── */
+.screenshot-gallery,
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 1300px;
+}
+
+.gallery-item,
+.video-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+}
+
+.gallery-item:hover,
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(16,185,129,0.2);
+}
+
+.gallery-item img,
+.video-card video {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #374151;
+}
+
+.gallery-item p,
+.video-card p {
+  padding: 1rem;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* Make video controls look good on dark background */
+video {
+  background: #000;
+}
+video::-webkit-media-controls {
+  filter: invert(1);
+}
