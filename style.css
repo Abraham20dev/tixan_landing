@@ -14,7 +14,45 @@ body {
 
 a { color: #10b981; text-decoration: none; transition: color 0.3s; }
 a:hover { color: #34d399; }
+/* ── Sticky download bar ── */
+#sticky-download {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1e293b;
+    border-top: 1px solid #334155;
+    padding: 0.8rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 200;
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+@media (max-width: 600px) {
+    #sticky-download { flex-direction: column; gap: 0.5rem; }
+}
 
+/* ── Hero CTA area ── */
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+.hero-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+.hero-proof {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #6ee7b7;
+    text-align: center;
+}
 /* ===== Header ===== */
 header {
   display: flex;
