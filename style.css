@@ -1,65 +1,51 @@
-/* ===== TIXAN Global Styles ===== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* =========================
+   BASE RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  background-color: #111827;
+  font-family: 'JetBrains Mono', monospace;
+  background: #111827;
   color: #d1d5db;
   line-height: 1.6;
   opacity: 0;
-  animation: bodyFadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-@keyframes bodyFadeIn { to { opacity: 1; } }
-
-a { color: #10b981; text-decoration: none; transition: color 0.3s; }
-a:hover { color: #34d399; }
-/* ── Sticky download bar ── */
-#sticky-download {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #1e293b;
-    border-top: 1px solid #334155;
-    padding: 0.8rem 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 200;
-    font-size: 0.95rem;
-    color: #d1d5db;
-}
-@media (max-width: 600px) {
-    #sticky-download { flex-direction: column; gap: 0.5rem; }
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
-/* ── Hero CTA area ── */
-.hero-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    margin-top: 2rem;
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  color: #10b981;
+  text-decoration: none;
 }
-.hero-note {
-    font-size: 0.85rem;
-    color: #94a3b8;
+
+a:hover {
+  color: #34d399;
 }
-.hero-proof {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    color: #6ee7b7;
-    text-align: center;
-}
-/* ===== Header ===== */
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  background-color: rgba(17,24,39,0.95);
+  padding: 1.2rem 5%;
+  background: rgba(17, 24, 39, 0.95);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -68,227 +54,148 @@ header {
 }
 
 .tixan-logo {
-  height: 5rem;
-  max-width: 100%;
-  display: block;
+  height: 4rem;
 }
 
-/* Hamburger menu (mobile) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #d1d5db;
-  margin: 3px 0;
-  transition: 0.3s;
-}
+
+/* =========================
+   NAV
+========================= */
 
 nav {
   display: flex;
-  align-items: center;
+  gap: 1.5rem;
 }
 
 nav a {
-  margin-left: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #9ca3af;
-  transition: color 0.3s, border-bottom 0.3s;
-  padding-bottom: 4px;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: #10b981;
-  border-bottom: 2px solid #10b981;
 }
 
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 2rem 5%;
-  background-color: #0a0f18;
-  border-top: 1px solid #1f2937;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
 
-footer a { color: #9ca3af; margin: 0 0.5rem; }
-footer a:hover { color: #10b981; }
+/* =========================
+   HERO (MOST IMPORTANT AREA)
+========================= */
 
-.footer-links { margin-bottom: 1rem; }
-
-/* ===== Hero ===== */
 .hero {
-  min-height: 80vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: radial-gradient(circle at center, #1f2937 0%, #111827 70%);
+  background: radial-gradient(circle at center, #1f2937, #111827);
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 3rem;
   color: #10b981;
-  margin-bottom: 1rem;
-  animation: slideUp 0.8s ease-out;
+  max-width: 900px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 650px;
   color: #9ca3af;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  animation: slideUp 0.8s 0.1s ease-out both;
+  font-size: 1.1rem;
 }
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
-/* ===== Screenshot showcase ===== */
-.screenshot-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-.screenshot {
-  max-width: 350px;
-  border-radius: 8px;
-  border: 1px solid #374151;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-}
-.screenshot:hover {
-  transform: scale(1.03);
-}
+/* =========================
+   SECTIONS
+========================= */
 
-/* ===== Buttons ===== */
-.btn {
-  display: inline-block;
-  background: #10b981;
-  color: #111827;
-  padding: 0.8rem 2rem;
-  border-radius: 5px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-  background: #34d399;
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid #10b981;
-  color: #10b981;
-}
-.btn-outline:hover {
-  background: #10b981;
-  color: #111827;
-}
-
-/* ===== Sections ===== */
 .section {
-  padding: 5rem 5%;
-  max-width: 1200px;
+  padding: 4rem 5%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .section h2 {
-  font-size: 2.2rem;
-  color: #10b981;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
+  color: #10b981;
 }
 
-/* ===== Feature Cards ===== */
+
+/* =========================
+   FEATURE GRID
+========================= */
+
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .feature-card {
   background: #1f2937;
-  padding: 2rem;
-  border-radius: 8px;
+  padding: 1.5rem;
   border: 1px solid #374151;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(16,185,129,0.15);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  transform: translateY(-4px);
 }
 
 .feature-card h3 {
   color: #10b981;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
-/* ===== Download Section ===== */
-.download-details {
-  background: #1f2937;
-  padding: 2rem;
-  border-radius: 8px;
-  border: 1px solid #374151;
-}
-.release-info {
-  margin: 1rem 0;
-  font-size: 1rem;
-}
-.release-info span {
-  color: #10b981;
+
+/* =========================
+   BUTTONS (SINGLE STYLE SYSTEM)
+========================= */
+
+.btn {
+  display: inline-block;
+  background: #10b981;
+  color: #111827;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* ===== Contact Form ===== */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+.btn:hover {
+  background: #34d399;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  background: #1f2937;
-  border: 1px solid #374151;
-  border-radius: 4px;
-  color: #fff;
-  font-family: inherit;
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #1f2937;
+  margin-top: 3rem;
 }
 
-.contact-form button {
-  width: 100%;
-}
 
-/* ===== Fade‑in on scroll ===== */
+/* =========================
+   FADE-IN ANIMATION
+========================= */
+
 .fade-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(20px);
+  transition: 0.5s ease;
 }
 
 .fade-in.visible {
@@ -296,69 +203,28 @@ footer a:hover { color: #10b981; }
   transform: translateY(0);
 }
 
-/* ===== Responsive ===== */
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
-  header { flex-direction: row; flex-wrap: wrap; }
-  .hamburger { display: flex; }
+  header {
+    flex-wrap: wrap;
+  }
+
   nav {
-    display: none;
     flex-direction: column;
     width: 100%;
-    background: rgba(17,24,39,0.95);
     margin-top: 1rem;
+    display: none;
   }
-  nav.show { display: flex; }
-  nav a { margin: 0.5rem 0; }
-  .hero h1 { font-size: 2.5rem; }
-}
 
-/* ── Screenshot & Video Galleries ── */
-.screenshot-gallery,
-.video-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0 auto 2rem;
-  max-width: 1300px;
-}
+  nav.show {
+    display: flex;
+  }
 
-.gallery-item,
-.video-card {
-  background: #1f2937;
-  border: 1px solid #374151;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  width: 300px;
-}
-
-.gallery-item:hover,
-.video-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(16,185,129,0.2);
-}
-
-.gallery-item img,
-.video-card video {
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid #374151;
-}
-
-.gallery-item p,
-.video-card p {
-  padding: 1rem;
-  color: #d1d5db;
-  font-size: 0.95rem;
-  text-align: center;
-  margin: 0;
-}
-
-/* Make video background dark so default controls remain visible */
-video {
-  background: #111827;   /* matches the site's background */
-  outline: none;
-}
-  filter: invert(1);
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
