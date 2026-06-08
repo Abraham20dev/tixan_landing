@@ -2,262 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="AfmRCIvm6Zfz8gP_DO6KTsjFMMfP5kKDORacFS5gQ_g" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="TIXAN is a fully offline, deterministic manufacturing intelligence system that analyzes STEP files and returns face‑level manufacturability reports with process‑aware scoring. Semantic geometry reasoning for machining, molding, casting, sheet metal, and additive manufacturing.">
-  <meta name="keywords" content="TIXAN, manufacturing intelligence, CAD analysis, STEP file, manufacturability, semantic geometry, injection molding, machining, casting, sheet metal, additive manufacturing, design for manufacturing, DFM">
-  <meta name="author" content="TIXAN">
-  <meta name="robots" content="index, follow">
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="TIXAN – Deterministic Manufacturing Intelligence">
-  <meta property="og:description" content="Offline CAD analysis with face‑level traceability. No AI, no cloud – just geometry you can verify.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/index.html">
-  <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
-  <title>TIXAN – Deterministic Manufacturing Intelligence | Semantic Geometry CAD Analysis</title>
+
+  <title>TIXAN – Manufacturing Failure Detection for CAD</title>
+
+  <meta name="description" content="TIXAN detects manufacturing failures in CAD models before production. Fully offline STEP/STL analysis with exact face-level insights.">
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0Y6SENL8BB');
-  </script>
 </head>
-<body>
-  <header>
-    <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
-          <stop offset="0%" stop-color="#f8fafc"/>
-          <stop offset="25%" stop-color="#e2e8f0"/>
-          <stop offset="50%" stop-color="#cbd5e1"/>
-          <stop offset="70%" stop-color="#94a3b8"/>
-          <stop offset="100%" stop-color="#475569"/>
-        </linearGradient>
-        <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
-          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-          <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <!-- Metallic T -->
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
-      <!-- TIXAN Text -->
-      <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
-    </svg>
-    <div class="hamburger"><span></span><span></span><span></span></div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="features.html">Features</a>
-      <a href="download.html">Download</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Stop manually checking your CAD files</h1>
-    <p>
-        TIXAN reads your STEP or STL file and instantly tells you exactly which faces are too thin,
-        too deep, or impossible to machine – with exact measurements, no cloud, no AI. Mathematically it calculates the suggestions to make using phyiscs
-    </p>
-    <div class="hero-cta">
-        <a href="download.html" class="btn">📥 Download for Windows</a>
-        <span class="hero-note">No installation · Works offline · 100% private</span>
-    </div>
-    <div class="hero-proof">
-        ✅ Join 50+ engineers already downloaded &nbsp;|&nbsp; ✅ 13 built‑in manufacturing checks &nbsp;|&nbsp; ✅ 5 process modes
-    </div>
+<body>
+
+<header>
+  <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+    <text x="20" y="55" font-size="48" font-family="Arial Black" fill="#10b981">TIXAN</text>
+  </svg>
+
+  <div class="hamburger"><span></span><span></span><span></span></div>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="features.html">Features</a>
+    <a href="download.html">Download</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+  <h1>Will this part fail in manufacturing?</h1>
+
+  <p>
+    TIXAN analyzes your CAD model and shows exactly where it will fail
+    before you machine it.
+  </p>
+
+  <div class="hero-cta">
+    <a href="download.html" class="btn">Analyze CAD File</a>
+    <span class="hero-note">Works offline · No cloud · Fully private</span>
+  </div>
+
+  <div class="hero-proof">
+    Used to detect thin walls, holes, undercuts, and machining risks directly from STEP/STL files
+  </div>
+
 </section>
 
-  <!-- ── Screenshots & Video Tutorials ── -->
-  <section class="section">
-    <h2>See it in action</h2>
+<!-- SIMPLE VALUE SECTION -->
+<section class="section">
 
-    <!-- Screenshots -->
-    <h3 style="text-align:center; color:#10b981; margin-bottom:1.5rem;">🖼️ App Screenshots</h3>
-    <div class="screenshot-gallery">
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/home.png" target="_blank">
-                <img src="help_screenshots/home.png" alt="TIXAN Home Page – Score, decision guide, and issues table" loading="lazy">
-            </a>
-            <p>Home Page – Dashboard, score, decision guide, and issue tables</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/viewer.png" target="_blank">
-                <img src="help_screenshots/viewer.png" alt="TIXAN 3D Viewer – Heatmap and interactive highlight" loading="lazy">
-            </a>
-            <p>3D Viewer – Face‑coloured heatmap, wireframe, and orange highlight</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/settings.png" target="_blank">
-                <img src="help_screenshots/settings.png" alt="TIXAN Settings – Detector configuration and score parameters" loading="lazy">
-            </a>
-            <p>Settings Page – Enable/disable detectors, tune thresholds, adjust scoring</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/help.png" target="_blank">
-                <img src="help_screenshots/help.png" alt="TIXAN Help & Learning – Quick start, features, and standards" loading="lazy">
-            </a>
-            <p>Help & Learning – Quick start guide, user manual, and standards reference</p>
-        </div>
+  <h2>What TIXAN does</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Finds failure points</h3>
+      <p>Identifies exact faces in your CAD that will fail manufacturing.</p>
     </div>
 
-    <!-- Video Tutorials -->
-    <h3 style="text-align:center; color:#10b981; margin:2.5rem 0 1.5rem;">🎬 Quick Tutorials</h3>
-    <div class="video-gallery">
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/home.png" preload="metadata">
-                <source src="help_videos/home.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Home Page – Load a STEP, run analysis, and understand the score</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/viewer.png" preload="metadata">
-                <source src="help_videos/viewer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>3D Viewer – Inspect issues, toggle wireframe, and use clip planes</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/home.png" preload="metadata">
-                <source src="help_videos/report.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Reports – Export HTML, verify pass/fail, and compare revisions</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/settings.png" preload="metadata">
-                <source src="help_videos/settings.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Settings – Customise detectors and shop‑specific thresholds</p>
-        </div>
+    <div class="feature-card">
+      <div class="feature-icon">📐</div>
+      <h3>Explains why</h3>
+      <p>Shows measurable geometric reasons behind every issue.</p>
     </div>
-    <p style="text-align:center; color:#94a3b8; font-size:0.85rem; margin-top:1rem;">
-        All videos are short, offline‑friendly MP4 files. Click to play right here.
-    </p>
-  </section>
 
-  <!-- ── Original three features ── -->
-  <section class="section">
-    <h2>Engineered from first principles. Verified at every face.</h2>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔍</div>
-        <h3>Face‑Level Traceability</h3>
-        <p>Every issue links to a specific CAD face with an exact measurement.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🛡️</div>
-        <h3>13 Manufacturing Detectors</h3>
-        <p>Planar Thin‑Walls, holes, Cylindrical Thin‑Wall, Small Internal Radii, Deep pockets, Undercuts, Draft angles, Rib / Boss / Web, Edge Classifier, Hole‑Edge Proximity, AM Support, Setup Feasibility, Tolerance Sensitivity</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚙️</div>
-        <h3>5 Process Modes</h3>
-        <p>Machining, Molding, Casting, Sheet Metal, Additive. Each with custom thresholds.</p>
-      </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚙️</div>
+      <h3>Suggests fixes</h3>
+      <p>Gives direct design changes to make your part manufacturable.</p>
     </div>
-  </section>
-  <!-- ── Axiom Structural Intelligence ── -->
-  <section class="section">
-    <h2>Now with Axiom Structural Intelligence</h2>
-    <p style="text-align:center; color:#94a3b8; max-width:800px; margin:0 auto 2rem;">
-      TIXAN v1.2.6 doesn’t just find manufacturability issues – it traces force flow, computes exact
-      deflection & stress, and gives you physics‑backed design fixes. All offline. No mesh.
-    </p>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔗</div>
-        <h3>Load Path Tracing</h3>
-        <p>Automatically discover how force moves from the applied load through the part to the supports.
-           Every path is ranked by confidence and highlights the weakest structural link.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚡</div>
-        <h3>Deterministic Physics Engine</h3>
-        <p>Deflection, von Mises stress, safety factor, buckling, and natural frequency – computed from
-           closed‑form engineering formulas using your exact CAD geometry.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">💡</div>
-        <h3>Verified Design Suggestions</h3>
-        <p>Get concrete, equation‑backed recommendations like “increase thickness of face 32 from 1.0 mm
-           to 1.5 mm to reduce deflection by 70%”. Each move is automatically checked for feasibility.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🎛️</div>
-        <h3>Interactive Controls</h3>
-        <p>Adjust force magnitude, change material (Steel / Aluminum / Titanium / ABS), or click any face
-           on the 3D model to define exactly where the load is applied or where the part is clamped.</p>
-      </div>
-    </div>
-  </section>
-  <!-- ── NEW: Designed for Trust section ── -->
-  <section class="section">
-    <h2>Designed for Trust. Built for the Shop Floor.</h2>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🧠</div>
-        <h3>Adaptive Shop‑Brain</h3>
-        <p>
-          TIXAN learns from your shop’s decisions. Mark any issue as accepted and the system remembers – 
-          automatically adjusting severity over time. No cloud, no external servers. Your shop’s intelligence 
-          stays with you, making each report smarter than the last.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔬</div>
-        <h3>Physics‑Based Heuristics</h3>
-        <p>
-          Every recommendation is grounded in real‑world physics, not guesswork. Cantilever deflection, 
-          tool stick‑out limits, hole‑edge breakout – all calculated from exact geometry. You get manufacturing 
-          advice you can trust, backed by measurable first‑principle reasoning.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📈</div>
-        <h3>Manufacturing Maturity Score</h3>
-        <p>
-          A single number from 1 to 10 that rates how production‑ready your part is. Combines criticality, 
-          count of issues, and process‑specific thresholds into an instant readiness indicator. 
-          No interpretation needed – know in seconds if your design is shop‑ready.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📄</div>
-        <h3>Interactive Modern Report</h3>
-        <p>
-          Export a self‑contained HTML report with a full analytics dashboard, severity breakdown, 
-          design‑change simulator, and issue register. Print to PDF or share offline – the report is 
-          styled for clarity and built to support real shop‑floor decisions.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="features.html">Features</a> |
-      <a href="download.html">Download</a> |
-      <a href="contact.html">Contact</a>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="section">
+
+  <h2>Built for engineers who need certainty</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <h3>100% Offline</h3>
+      <p>Your CAD never leaves your machine.</p>
     </div>
-    <p>&copy; 2026 TIXAN. Built for engineers, by engineers.</p>
-    <p><small>This site does not use cookies or collect personal data.</small></p>
-  </footer>
-  <script src="script.js"></script>
-<div id="sticky-download">
-    <span>🔧 TIXAN is hear to help you catch DFM mistakes before machining</span>
-    <a href="download.html" class="btn">Download for Windows</a>
-</div>
+
+    <div class="feature-card">
+      <h3>Face-level precision</h3>
+      <p>Every result is tied to exact geometry.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Deterministic results</h3>
+      <p>No AI guessing. Same input → same output.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCREENSHOT STRIP (KEEP THIS IMPORTANT) -->
+<section class="section">
+
+  <h2>See it in action</h2>
+
+  <div class="screenshot-gallery">
+    <div class="gallery-item">
+      <img src="help_screenshots/home.png" alt="TIXAN Dashboard">
+      <p>Manufacturing risk overview</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="help_screenshots/viewer.png" alt="3D Viewer">
+      <p>Face-level heatmap analysis</p>
+    </div>
+
+    <div class="gallery-item">
+      <img src="help_screenshots/settings.png" alt="Settings">
+      <p>Process-specific tuning</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- FINAL CTA -->
+<section class="section" style="text-align:center;">
+
+  <h2>Start checking CAD before manufacturing</h2>
+
+  <a href="download.html" class="btn">Download TIXAN</a>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 TIXAN. Built for engineers.</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
