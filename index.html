@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>TIXAN – Manufacturing Failure Detection for CAD</title>
+  <meta name="description" content="TIXAN: Offline manufacturing intelligence for STEP and STL files. Know if a part is manufacturable before machining starts.">
+  <meta name="keywords" content="TIXAN, CAD analysis, DFM, STEP analyzer, STL analysis, manufacturability">
+  <meta name="author" content="TIXAN">
 
-  <meta name="description" content="TIXAN detects manufacturing failures in CAD models before production. Fully offline STEP/STL analysis with exact face-level insights.">
+  <title>TIXAN</title>
 
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
@@ -14,131 +16,108 @@
 
 <body>
 
+<!-- HEADER (minimal navigation only) -->
 <header>
-  <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
-    <text x="20" y="55" font-size="48" font-family="Arial Black" fill="#10b981">TIXAN</text>
-  </svg>
+  <svg class="tixan-logo" viewBox="0 0 500 80">
+    <defs>
+      <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
+        <stop offset="0%" stop-color="#f8fafc"/>
+        <stop offset="100%" stop-color="#475569"/>
+      </linearGradient>
+    </defs>
 
-  <div class="hamburger"><span></span><span></span><span></span></div>
+    <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z"
+          fill="url(#metalGrad)" stroke="#334155" stroke-width="6"/>
+
+    <text x="145" y="65" font-size="48" font-weight="900" fill="#e2e8f0">
+      TIXAN
+    </text>
+  </svg>
 
   <nav>
     <a href="index.html" class="active">Home</a>
-    <a href="features.html">Features</a>
+    <a href="features.html">Details</a>
     <a href="download.html">Download</a>
-    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<!-- HERO -->
+
+<!-- HERO (ONE IDEA ONLY) -->
 <section class="hero">
 
-  <h1>Will this part fail in manufacturing?</h1>
+  <h1>
+    Know if your part can be manufactured<br>
+    before machining starts.
+  </h1>
 
   <p>
-    TIXAN analyzes your CAD model and shows exactly where it will fail
-    before you machine it.
+    TIXAN analyzes STEP and STL files offline and tells you exactly
+    what will fail in manufacturing — at the face level, with real geometry.
   </p>
 
   <div class="hero-cta">
-    <a href="download.html" class="btn">Analyze CAD File</a>
-    <span class="hero-note">Works offline · No cloud · Fully private</span>
-  </div>
-
-  <div class="hero-proof">
-    Used to detect thin walls, holes, undercuts, and machining risks directly from STEP/STL files
+    <a href="download.html" class="btn">Download for Windows</a>
+    <div class="hero-note">Offline · No cloud · No signup</div>
   </div>
 
 </section>
 
-<!-- SIMPLE VALUE SECTION -->
+
+<!-- SIMPLE PROOF (NOT FEATURES) -->
 <section class="section">
 
-  <h2>What TIXAN does</h2>
+  <h2>What it does</h2>
 
   <div class="feature-grid">
 
     <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h3>Finds failure points</h3>
-      <p>Identifies exact faces in your CAD that will fail manufacturing.</p>
+      <h3>Finds manufacturing risks</h3>
+      <p>Thin walls, deep pockets, undercuts, weak features.</p>
     </div>
 
     <div class="feature-card">
-      <div class="feature-icon">📐</div>
-      <h3>Explains why</h3>
-      <p>Shows measurable geometric reasons behind every issue.</p>
+      <h3>Pinpoints exact faces</h3>
+      <p>Every issue is tied to real geometry — not estimates.</p>
     </div>
 
     <div class="feature-card">
-      <div class="feature-icon">⚙️</div>
-      <h3>Suggests fixes</h3>
-      <p>Gives direct design changes to make your part manufacturable.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- TRUST SECTION -->
-<section class="section">
-
-  <h2>Built for engineers who need certainty</h2>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <h3>100% Offline</h3>
+      <h3>Works offline</h3>
       <p>Your CAD never leaves your machine.</p>
     </div>
 
-    <div class="feature-card">
-      <h3>Face-level precision</h3>
-      <p>Every result is tied to exact geometry.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Deterministic results</h3>
-      <p>No AI guessing. Same input → same output.</p>
-    </div>
-
   </div>
 
 </section>
 
-<!-- SCREENSHOT STRIP (KEEP THIS IMPORTANT) -->
+
+<!-- WHY IT EXISTS (VERY IMPORTANT SECTION) -->
 <section class="section">
 
-  <h2>See it in action</h2>
+  <h2>Why TIXAN exists</h2>
 
-  <div class="screenshot-gallery">
-    <div class="gallery-item">
-      <img src="help_screenshots/home.png" alt="TIXAN Dashboard">
-      <p>Manufacturing risk overview</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="help_screenshots/viewer.png" alt="3D Viewer">
-      <p>Face-level heatmap analysis</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="help_screenshots/settings.png" alt="Settings">
-      <p>Process-specific tuning</p>
-    </div>
-  </div>
+  <p style="max-width:750px; margin:0 auto; text-align:center; color:#9ca3af;">
+    Most design mistakes are discovered too late — after machining starts.
+    TIXAN exists to move that decision earlier.
+    Before cost. Before waste. Before failure.
+  </p>
 
 </section>
+
 
 <!-- FINAL CTA -->
 <section class="section" style="text-align:center;">
 
-  <h2>Start checking CAD before manufacturing</h2>
+  <h2>Ready to check your first part?</h2>
 
-  <a href="download.html" class="btn">Download TIXAN</a>
+  <a href="download.html" class="btn" style="margin-top:1rem;">
+    Download TIXAN
+  </a>
 
 </section>
 
+
 <footer>
-  <p>&copy; 2026 TIXAN. Built for engineers.</p>
+  <p>&copy; 2026 TIXAN</p>
 </footer>
 
 <script src="script.js"></script>
