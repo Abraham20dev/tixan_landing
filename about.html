@@ -3,93 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Why TIXAN exists — offline manufacturing intelligence for CAD analysis.">
-  <title>About TIXAN</title>
-
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="TIXAN is a deterministic, offline manufacturing intelligence system. Face‑level analysis for STEP and STL files – no AI, no cloud, just geometry you can verify.">
+  <meta name="keywords" content="TIXAN, about, manufacturing intelligence, mission, offline CAD analysis, deterministic geometry, STEP, STL">
+  <meta name="author" content="TIXAN">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="About TIXAN – Deterministic, Offline Manufacturing Intelligence">
+  <meta property="og:description" content="Face‑level manufacturability analysis for STEP and STL files. No cloud – physics‑based heuristics and shop‑specific learning you can trust.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/about.html">
+  <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
+  <title>About TIXAN – Deterministic Manufacturing Intelligence</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Y6SENL8BB');
+  </script>
 </head>
-
 <body>
+  <header>
+    <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
+          <stop offset="0%" stop-color="#f8fafc"/>
+          <stop offset="25%" stop-color="#e2e8f0"/>
+          <stop offset="50%" stop-color="#cbd5e1"/>
+          <stop offset="70%" stop-color="#94a3b8"/>
+          <stop offset="100%" stop-color="#475569"/>
+        </linearGradient>
+        <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
+        </linearGradient>
+      </defs>
+      <!-- Metallic T -->
+      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
+      <!-- TIXAN Text -->
+      <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
+    </svg>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="features.html">Features</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <svg class="tixan-logo" viewBox="0 0 500 80">
-    <defs>
-      <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
-        <stop offset="0%" stop-color="#f8fafc"/>
-        <stop offset="100%" stop-color="#475569"/>
-      </linearGradient>
-    </defs>
+  <section class="section">
+    <h2>Why TIXAN exists</h2>
+    <div style="max-width:800px; margin:0 auto; text-align:center;">
+      <p style="font-size:1.2rem; color:#d1d5db; margin-bottom:2rem;">
+        Manufacturing processes should be geometry plus physics-based reasoning. TIXAN approaches these manufacturability issues using First Principle Thinking. Our system questions about the fundamental truths and try to eliminate assumptions that contributes to poor decision making.
+        TIXAN is <strong>deterministic, offline desktop tool</strong> that reads your <strong>STEP and STL files</strong>,
+        applies physics‑based heuristics, and gives you a face‑level manufacturability report – in seconds.
+      </p>
+      <p style="font-size:1.1rem; color:#94a3b8;">
+        No cloud.Just <strong>semantic geometry</strong> you can verify.
+      </p>
+    </div>
+  </section>
 
-    <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z"
-          fill="url(#metalGrad)" stroke="#334155" stroke-width="6"/>
+  <section class="section">
+    <h2>What TIXAN gives you</h2>
+    <div class="feature-grid" style="max-width:900px; margin:0 auto;">
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div class="feature-icon">📐</div>
+        <h3>Face‑Level Reasoning</h3>
+        <p>Every issue is traced to a specific CAD face with an exact measurement. No vague warnings.</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div class="feature-icon">🔬</div>
+        <h3>Physics‑Based Heuristics</h3>
+        <p>Recommendations come from first‑principle formulas – cantilever deflection, tool clearance, breakout risk – not statistical random data.</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div class="feature-icon">🧠</div>
+        <h3>Shop‑Specific Learning</h3>
+        <p>Mark issues as accepted and TIXAN remembers. Your shop’s intelligence stays local, making each report smarter.</p>
+      </div>
+      <div class="feature-card fade-in" style="text-align:center;">
+        <div class="feature-icon">🔐</div>
+        <h3>100% Offline & Private</h3>
+        <p>Your CAD data never leaves your machine. No internet required. Your intellectual property stays yours.</p>
+      </div>
+    </div>
+  </section>
 
-    <text x="145" y="65" font-size="48" font-weight="900" fill="#e2e8f0">
-      TIXAN
-    </text>
-  </svg>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html">Details</a>
-    <a href="download.html">Download</a>
-    <a href="about.html" class="active">About</a>
-  </nav>
-</header>
-
-
-<section class="section" style="text-align:center;">
-
-  <h1>Why TIXAN exists</h1>
-
-  <p style="max-width:700px; margin:2rem auto; font-size:1.1rem; color:#d1d5db;">
-    Most manufacturing errors are discovered too late — after machining has started.
-    That means wasted time, wasted material, and expensive redesign cycles.
-  </p>
-
-  <p style="max-width:700px; margin:2rem auto; font-size:1.1rem; color:#9ca3af;">
-    TIXAN exists to move that decision earlier.
-    It analyzes CAD geometry before production and tells you what will fail,
-    so you can fix it while it is still just a model.
-  </p>
-
-  <div style="margin-top:3rem;">
-    <p style="color:#10b981; font-weight:bold;">
-      STEP + STL → Geometry analysis → Manufacturability decision
+  <section class="section">
+    <h2>Built for engineers, by engineers</h2>
+    <p style="max-width:800px; margin:0 auto; text-align:center; color:#d1d5db;">
+      TIXAN was designed from the grounded engineering truth to be a key verifier before the CAD is brought to physical reality.
+      a <strong>reliable, offline tool</strong> that answers “Can I make this part?” before a single chip is cut.
+      It supports both <strong>STEP</strong> (CAD) and <strong>STL</strong> (mesh) files, so you can analyze models from any source.
     </p>
-  </div>
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="download.html" class="btn">Download for Windows</a>
+    </p>
+  </section>
 
-</section>
-
-
-<!-- PRINCIPLE (VERY IMPORTANT) -->
-<section class="section">
-
-  <h2>Principle</h2>
-
-  <div style="max-width:750px; margin:0 auto; text-align:center; color:#9ca3af;">
-    TIXAN is built on one idea:
-    <br><br>
-    <strong style="color:#d1d5db;">
-      If geometry is known, manufacturing risk should be predictable.
-    </strong>
-  </div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-<section class="section" style="text-align:center; margin-top:3rem;">
-
-  <a href="download.html" class="btn">Try TIXAN</a>
-
-</section>
-
-
-<footer>
-  <p>&copy; 2026 TIXAN</p>
-</footer>
-
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="features.html">Features</a> |
+      <a href="download.html">Download</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2026 TIXAN. Built for engineers, by engineers.</p>
+    <p><small>This site does not use cookies or collect personal data.</small></p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
