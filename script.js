@@ -1,7 +1,4 @@
-//
-// ===== 1. SIMPLE SCROLL REVEAL =====
-//
-
+// ===== 1. SCROLL REVEAL =====
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -10,48 +7,36 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
-  observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 
-//
-// ===== 2. MOBILE MENU (SIMPLE TOGGLE) =====
-//
-
+// ===== 2. MOBILE MENU =====
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
-
 if (hamburger && nav) {
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
-  });
+  hamburger.addEventListener('click', () => nav.classList.toggle('show'));
 }
 
 
-//
-// ===== 3. DOWNLOAD PAGE LOGIC (STATIC LINK) =====
-//
+// ===== 3. DOWNLOAD BUTTON (STATIC, NO API) =====
+document.addEventListener('DOMContentLoaded', function () {
+  const isDownloadPage = window.location.pathname.includes('download');
+  if (!isDownloadPage) return;
 
-const isDownloadPage = window.location.pathname.includes('download');
-
-if (isDownloadPage) {
-  const info = document.getElementById('release-info');
   const button = document.getElementById('download-btn');
+  if (!button) {
+    console.error('Download button not found – check ID');
+    return;
+  }
 
-  // Direct URL to your latest .zip release
+  //  Direct link to the .zip file on GitHub
   const directUrl = 'https://github.com/Abraham20dev/tixan_landing/releases/latest/download/TIXAN.zip';
 
-  if (button) {
-    button.href = directUrl;
-    button.textContent = "Download for Windows";
-  }
+  button.href = directUrl;
+  button.textContent = 'Download for Windows';
 
-  if (info) {
-    info.innerHTML = `<p>Version: <strong>latest</strong></p>`;
-  }
-
-  if (typeof gtag === "function") {
+  // Optional Google Analytics tracking (safe if gtag doesn't exist)
+  if (typeof gtag === 'function') {
     button.addEventListener('click', () => {
       gtag('event', 'download_click', {
         event_category: 'engagement',
@@ -59,4 +44,10 @@ if (isDownloadPage) {
       });
     });
   }
-}
+
+  // Show version info if the element exists
+  const info = document.getElementById('release-info');
+  if (info) {
+    info.innerHTML = `<p>Version: <strong>latest</strong></p>`;
+  }
+});
