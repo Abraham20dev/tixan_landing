@@ -30,7 +30,7 @@ if (hamburger && nav) {
 
 
 //
-// ===== 3. DOWNLOAD PAGE LOGIC (OPTIONAL, SAFE FALLBACK) =====
+// ===== 3. DOWNLOAD PAGE LOGIC (STATIC LINK) =====
 //
 
 const isDownloadPage = window.location.pathname.includes('download');
@@ -39,7 +39,7 @@ if (isDownloadPage) {
   const info = document.getElementById('release-info');
   const button = document.getElementById('download-btn');
 
-  // ← CHANGE THIS to your actual direct download URL
+  // Direct URL to your latest .zip release
   const directUrl = 'https://github.com/Abraham20dev/tixan_landing/releases/latest/download/TIXAN.zip';
 
   if (button) {
@@ -48,7 +48,6 @@ if (isDownloadPage) {
   }
 
   if (info) {
-    // Optionally show a static version
     info.innerHTML = `<p>Version: <strong>latest</strong></p>`;
   }
 
@@ -59,11 +58,5 @@ if (isDownloadPage) {
         event_label: 'tixan_windows'
       });
     });
-  }
-}
-      })
-      .catch(() => {
-        info.innerHTML = "<p>Unable to load release info.</p>";
-      });
   }
 }
