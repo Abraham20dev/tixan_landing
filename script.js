@@ -39,45 +39,28 @@ if (isDownloadPage) {
   const info = document.getElementById('release-info');
   const button = document.getElementById('download-btn');
 
-  const repo = 'Abraham20dev/tixan_landing';
-  const url = `https://api.github.com/repos/${repo}/releases/latest`;
+  // ← CHANGE THIS to your actual direct download URL
+  const directUrl = 'https://github.com/Abraham20dev/tixan_landing/releases/latest/download/TIXAN.zip';
 
-  if (info && button) {
-    fetch(url)
-      .then(res => res.ok ? res.json() : null)
-      .then(data => {
-        if (!data) {
-          info.innerHTML = "<p>Latest version unavailable.</p>";
-          return;
-        }
+  if (button) {
+    button.href = directUrl;
+    button.textContent = "Download for Windows";
+  }
 
-        const asset = data.assets?.find(a => a.name.endsWith('.zip'));
+  if (info) {
+    // Optionally show a static version
+    info.innerHTML = `<p>Version: <strong>latest</strong></p>`;
+  }
 
-        if (!asset) {
-          info.innerHTML = "<p>No downloadable file found.</p>";
-          return;
-        }
-
-        const version = data.tag_name?.replace('v', '') || "latest";
-
-        info.innerHTML = `
-          <p>Version: <strong>v${version}</strong></p>
-        `;
-
-        button.href = asset.browser_download_url;
-        button.textContent = "Download for Windows";
-
-        //
-        // Optional tracking (only if gtag exists)
-        //
-        if (typeof gtag === "function") {
-          button.addEventListener('click', () => {
-            gtag('event', 'download_click', {
-              event_category: 'engagement',
-              event_label: 'tixan_windows'
-            });
-          });
-        }
+  if (typeof gtag === "function") {
+    button.addEventListener('click', () => {
+      gtag('event', 'download_click', {
+        event_category: 'engagement',
+        event_label: 'tixan_windows'
+      });
+    });
+  }
+}
       })
       .catch(() => {
         info.innerHTML = "<p>Unable to load release info.</p>";
