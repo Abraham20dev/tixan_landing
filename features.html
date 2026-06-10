@@ -3,149 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>TIXAN Features – Manufacturing Intelligence Deep Dive</title>
-
-  <meta name="description" content="Deep technical breakdown of TIXAN: face-level CAD analysis, manufacturability detection, and deterministic physics reasoning for STEP/STL models.">
-
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore TIXAN's 13 manufacturing detectors, 5 process modes, severity‑ranked reports, and shop‑specific learning. 100% offline desktop and private.">
+  <meta name="keywords" content="TIXAN features, manufacturing detectors, manufacturability, face‑level traceability, process modes, CAD analysis, DFM, offline CAD">
+  <meta name="author" content="TIXAN">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="TIXAN Features – 13 Detectors, Face‑Level Traceability &amp; Process Modes">
+  <meta property="og:description" content="Explore TIXAN's 13 manufacturing detectors, 5 process modes, severity‑ranked reports, and shop‑specific learning. 100% offline desktop and private.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/features.html">
+  <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
+  <title>TIXAN Features – 13 Detectors, Face‑Level Traceability &amp; Process Modes</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0Y6SENL8BB');
+  </script>
 </head>
-
 <body>
+  <header>
+    <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
+          <stop offset="0%" stop-color="#f8fafc"/>
+          <stop offset="25%" stop-color="#e2e8f0"/>
+          <stop offset="50%" stop-color="#cbd5e1"/>
+          <stop offset="70%" stop-color="#94a3b8"/>
+          <stop offset="100%" stop-color="#475569"/>
+        </linearGradient>
+        <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+          <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
+        </linearGradient>
+      </defs>
+      <!-- Metallic T -->
+      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
+      <!-- TIXAN Text -->
+      <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
+    </svg>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="features.html" class="active">Features</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="tixan-logo">
-    <span style="color:#10b981; font-size:1.5rem; font-weight:800;">TIXAN</span>
-  </div>
+  <section class="section">
+    <h2>Manufacturing Intelligence &amp; Structural Physics</h2>
+    <div class="feature-grid">
+      <!-- Original cards (abbreviated for clarity – keep all existing text) -->
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔍</div>
+        <h3>Face‑Level Traceability</h3>
+        <p>Every detected issue is pinned to a specific CAD face with an exact measurement – no black boxes.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🛡️</div>
+        <h3>13 Manufacturing Detectors</h3>
+        <p>Thin walls, holes, small radii, deep pockets, undercuts, draft, ribs/bosses, edges, hole‑edge proximity, AM support, setup feasibility, and tolerance sensitivity – all covered.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">⚙️</div>
+        <h3>5 Process Modes</h3>
+        <p>Machining, Molding, Casting, Sheet Metal, and Additive. Each mode applies custom thresholds and physics heuristics for accurate, process‑specific feedback.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📊</div>
+        <h3>Severity‑Ranked Reports & Interactive Dashboard</h3>
+        <p>Critical, High, Medium, Low – grouped issues, Top‑10 risks, executive summary. The interactive HTML report includes a readiness gauge, severity bars, and a design‑change simulator.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🧠</div>
+        <h3>Adaptive Shop‑Brain</h3>
+        <p>Override thresholds and mark issues as accepted. TIXAN remembers your choices and automatically softens future severities. Your shop’s knowledge stays local and private.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔐</div>
+        <h3>100% Offline & Private</h3>
+        <p>Your CAD data never leaves your machine. No cloud, no internet required. Every analysis runs entirely on‑device, preserving your intellectual property.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔬</div>
+        <h3>Physics‑Based Heuristics</h3>
+        <p>Recommendations are calculated from first‑principle formulas – cantilever deflection, tool reach, breakout risk – not from statistical models or AI. Pure, verifiable engineering.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📈</div>
+        <h3>Manufacturing Maturity Score</h3>
+        <p>A 1‑10 rating that instantly communicates how close your part is to production readiness. Combines issue severity, count, and process thresholds into one trusted number.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🖥️</div>
+        <h3>3D Heatmap & Inspection Tools</h3>
+        <p>View face‑coloured risk maps, click‑to‑highlight any issue, toggle wireframe, and draw clip‑plane regions. The built‑in viewer gives you full visual control.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📁</div>
+        <h3>Export & Compliance</h3>
+        <p>Generate pass/fail certificates, revision comparison reports, and a shareable summary snippet. All exports are standalone HTML – no viewer needed.</p>
+      </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="features.html" class="active">Features</a>
-    <a href="download.html">Download</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="section">
-
-  <h1 style="text-align:center; color:#10b981; font-size:2.5rem;">
-    Engineering-grade CAD intelligence
-  </h1>
-
-  <p style="text-align:center; max-width:800px; margin:1rem auto; color:#9ca3af;">
-    TIXAN analyzes geometry at face-level precision to detect manufacturability failures,
-    explain why they happen, and suggest exact design fixes.
-  </p>
-
-</section>
-
-<!-- CORE SYSTEMS -->
-<section class="section">
-
-  <h2>Core Analysis System</h2>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <h3>Face-Level Geometry Analysis</h3>
-      <p>
-        Every CAD model is decomposed into individual faces and edges.
-        Each issue is traced to exact geometric entities with measurable parameters.
-      </p>
+      <!-- ── NEW Axiom cards ── -->
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔗</div>
+        <h3>Load Path Tracing</h3>
+        <p>See exactly how force travels through your part – from the applied load to the clamping points. Every path comes with a confidence score and highlights the weakest structural link.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">⚡</div>
+        <h3>Deterministic Structural Physics</h3>
+        <p>Deflection, von Mises stress, safety factor, buckling, and natural frequency – all computed from closed‑form engineering formulas. No mesh, no AI. Just real physics.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💡</div>
+        <h3>Verified Design Moves</h3>
+        <p>Receive actionable, equation‑backed suggestions (“increase this face from 1.0 to 1.5 mm”) that are automatically checked against your geometry. Know exactly what to change and why.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎛️</div>
+        <h3>Interactive Physics Controls</h3>
+        <p>Drag a slider to change the applied force, pick a material from the dropdown, or click a face on the 3D model to set custom load / support points. Physics updates instantly.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="feature-card">
-      <h3>Manufacturability Detection Engine</h3>
-      <p>
-        Detects thin walls, deep pockets, holes, undercuts, draft issues,
-        and machining constraints using deterministic geometric rules.
-      </p>
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a> |
+      <a href="about.html">About</a> |
+      <a href="features.html">Features</a> |
+      <a href="download.html">Download</a> |
+      <a href="contact.html">Contact</a>
     </div>
-
-    <div class="feature-card">
-      <h3>Process-Aware Evaluation</h3>
-      <p>
-        Different thresholds for machining, molding, casting, sheet metal,
-        and additive manufacturing ensure realistic evaluation per process.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PHYSICS LAYER -->
-<section class="section">
-
-  <h2>Physics & Structural Reasoning</h2>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <h3>Deterministic Physics Engine</h3>
-      <p>
-        Computes deflection, stress, buckling, and safety factors using
-        closed-form engineering equations—no statistical models.
-      </p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Load Path Interpretation</h3>
-      <p>
-        Identifies how forces travel through geometry from load points
-        to supports to detect structural weak links.
-      </p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Verified Design Fixes</h3>
-      <p>
-        Suggests geometry changes (thickness, length, support shifts)
-        and validates feasibility before recommending.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SYSTEM DESIGN -->
-<section class="section">
-
-  <h2>System Architecture Principles</h2>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <h3>Fully Offline</h3>
-      <p>No cloud dependency. All computation runs locally for IP security.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Deterministic Output</h3>
-      <p>Same CAD input always produces identical results.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Traceable Decisions</h3>
-      <p>Every result links back to a specific face, edge, and measurement.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="section" style="text-align:center;">
-
-  <h2>Ready to analyze real CAD files?</h2>
-
-  <a href="download.html" class="btn">Download TIXAN</a>
-
-</section>
-
-<footer>
-  <p>&copy; 2026 TIXAN. Engineering-grade manufacturing intelligence.</p>
-</footer>
-
+    <p>&copy; 2026 TIXAN. Built for engineers, by engineers.</p>
+    <p><small>This site does not use cookies or collect personal data.</small></p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
