@@ -1,4 +1,4 @@
-// ===== 1. SCROLL REVEAL =====
+// Fade‑in elements when they scroll into view
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -9,45 +9,57 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-
-// ===== 2. MOBILE MENU =====
+// Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 if (hamburger && nav) {
-  hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
 }
 
+// Fetch latest release from GitHub (runs only on download page)
+if (window.location.pathname.includes('download')) {
+  const repo = 'Abraham20dev/tixan_landing';   // <-- changed to desktop app repo
+  const releaseUrl = `https://api.github.com/repos/${repo}/releases/latest`;
+  const infoContainer = document.getElementById('release-info');
+  const downloadBtn = document.getElementById('download-btn');
 
-// ===== 3. DOWNLOAD BUTTON (STATIC, NO API) =====
-document.addEventListener('DOMContentLoaded', function () {
-  const isDownloadPage = window.location.pathname.includes('download');
-  if (!isDownloadPage) return;
+  if (infoContainer && downloadBtn) {
+    fetch(releaseUrl)
+      .then(res => {
+        if (!res.ok) throw new Error('Failed to fetch release');
+        return res.json();
+      })
+      .then(data => {
+        const version = data.tag_name.replace('v', '');
+        const releaseDate = new Date(data.published_at).toLocaleDateString();
+        const asset = data.assets.find(a => a.name.endsWith('.zip'));
+        if (asset) {
+          const sizeMB = (asset.size / (1024*1024)).toFixed(1);
+          infoContainer.innerHTML = `
+            <p>Latest version: <span>v${version}</span></p>
+            <p>Released: <span>${releaseDate}</span></p>
+            <p>Size: <span>${sizeMB} MB</span></p>
+          `;
+          downloadBtn.href = asset.browser_download_url;
+          downloadBtn.textContent = 'Download for Windows (ZIP)';
 
-  const button = document.getElementById('download-btn');
-  if (!button) {
-    console.error('Download button not found – check ID');
-    return;
-  }
-
-  //  Direct link to the .zip file on GitHub
-  const directUrl = 'https://github.com/Abraham20dev/tixan_landing/releases/latest/download/TIXAN.zip';
-
-  button.href = directUrl;
-  button.textContent = 'Download for Windows';
-
-  // Optional Google Analytics tracking (safe if gtag doesn't exist)
-  if (typeof gtag === 'function') {
-    button.addEventListener('click', () => {
-      gtag('event', 'download_click', {
-        event_category: 'engagement',
-        event_label: 'tixan_windows'
+          // ── TRACK DOWNLOAD CLICK ──
+          downloadBtn.addEventListener('click', () => {
+            gtag('event', 'download', {
+              'event_category': 'engagement',
+              'event_label': 'TIXAN_Windows_Download',
+              'value': 1
+            });
+          });
+        } else {
+          infoContainer.innerHTML = `<p>No ZIP file found in the latest release.</p>`;
+        }
+      })
+      .catch(err => {
+        infoContainer.innerHTML = `<p>Could not load release info. Please check back later.</p>`;
+        console.error(err);
       });
-    });
   }
-
-  // Show version info if the element exists
-  const info = document.getElementById('release-info');
-  if (info) {
-    info.innerHTML = `<p>Version: <strong>latest</strong></p>`;
-  }
-});
+}
