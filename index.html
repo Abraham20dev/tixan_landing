@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="AfmRCIvm6Zfz8gP_DO6KTsjFMMfP5kKDORacFS5gQ_g" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
   <meta name="description" content="TIXAN is a fully offline, deterministic manufacturing intelligence system that analyzes STEP files and returns face‑level manufacturability reports with process‑aware scoring. Semantic geometry reasoning for machining, molding, casting, sheet metal, and additive manufacturing.">
   <meta name="keywords" content="TIXAN, manufacturing intelligence, CAD analysis, STEP file, manufacturability, semantic geometry, injection molding, machining, casting, sheet metal, additive manufacturing, design for manufacturing, DFM">
   <meta name="author" content="TIXAN">
   <meta name="robots" content="index, follow">
-  <!-- Open Graph / Social Media -->
   <meta property="og:title" content="TIXAN – Deterministic Manufacturing Intelligence">
   <meta property="og:description" content="Offline CAD analysis with face‑level traceability. No AI, no cloud – just geometry you can verify.">
   <meta property="og:type" content="website">
@@ -18,7 +16,6 @@
   <title>TIXAN – Deterministic Manufacturing Intelligence | Semantic Geometry CAD Analysis</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -44,10 +41,8 @@
           <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
         </linearGradient>
       </defs>
-      <!-- Metallic T -->
       <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
       <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
-      <!-- TIXAN Text -->
       <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
     </svg>
     <div class="hamburger"><span></span><span></span><span></span></div>
@@ -60,187 +55,80 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Stop manually checking your CAD files</h1>
-    <p>
-        TIXAN reads your STEP or STL file and instantly tells you exactly which faces are too thin,
-        too deep, or impossible to machine – with exact measurements, no cloud, no AI. Mathematically it calculates the suggestions to make using phyiscs
+  <!-- HERO -->
+  <section class="hero" style="min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:2rem;">
+    <h1 style="font-size:clamp(2.5rem,6vw,4rem); color:#00e5ff; margin-bottom:1rem;">Verify Before You Cut</h1>
+    <p style="font-size:1.2rem; color:#9ca3af; max-width:700px; margin-bottom:2rem;">
+      Manufacturing mistakes are expensive – scrapped parts, broken tools, missed deadlines. FORGE checks your design against the real physical constraints of your process, offline, before the tool touches metal.
     </p>
-    <div class="hero-cta">
-        <a href="download.html" class="btn">📥 Download for Windows</a>
-        <span class="hero-note">No installation · Works offline · 100% private</span>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
+      <a href="download.html" class="btn" style="background:#00e5ff; color:#0f172a; padding:0.8rem 2rem; border-radius:5px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Download for Windows</a>
+      <a href="#how-it-works" class="btn btn-outline" style="border:2px solid #00e5ff; color:#00e5ff; padding:0.8rem 2rem; border-radius:5px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">How It Works</a>
     </div>
-    <div class="hero-proof">
-        ✅ Join 50+ engineers already downloaded &nbsp;|&nbsp; ✅ 13 built‑in manufacturing checks &nbsp;|&nbsp; ✅ 5 process modes
-    </div>
-</section>
-
-  <!-- ── Screenshots & Video Tutorials ── -->
-  <section class="section">
-    <h2>See it in action</h2>
-
-    <!-- Screenshots -->
-    <h3 style="text-align:center; color:#10b981; margin-bottom:1.5rem;">🖼️ App Screenshots</h3>
-    <div class="screenshot-gallery">
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/home.png" target="_blank">
-                <img src="help_screenshots/home.png" alt="TIXAN Home Page – Score, decision guide, and issues table" loading="lazy">
-            </a>
-            <p>Home Page – Dashboard, score, decision guide, and issue tables</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/viewer.png" target="_blank">
-                <img src="help_screenshots/viewer.png" alt="TIXAN 3D Viewer – Heatmap and interactive highlight" loading="lazy">
-            </a>
-            <p>3D Viewer – Face‑coloured heatmap, wireframe, and orange highlight</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/settings.png" target="_blank">
-                <img src="help_screenshots/settings.png" alt="TIXAN Settings – Detector configuration and score parameters" loading="lazy">
-            </a>
-            <p>Settings Page – Enable/disable detectors, tune thresholds, adjust scoring</p>
-        </div>
-        <div class="gallery-item fade-in">
-            <a href="help_screenshots/help.png" target="_blank">
-                <img src="help_screenshots/help.png" alt="TIXAN Help & Learning – Quick start, features, and standards" loading="lazy">
-            </a>
-            <p>Help & Learning – Quick start guide, user manual, and standards reference</p>
-        </div>
-    </div>
-
-    <!-- Video Tutorials -->
-    <h3 style="text-align:center; color:#10b981; margin:2.5rem 0 1.5rem;">🎬 Quick Tutorials</h3>
-    <div class="video-gallery">
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/home.png" preload="metadata">
-                <source src="help_videos/home.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Home Page – Load a STEP, run analysis, and understand the score</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/viewer.png" preload="metadata">
-                <source src="help_videos/viewer.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>3D Viewer – Inspect issues, toggle wireframe, and use clip planes</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/home.png" preload="metadata">
-                <source src="help_videos/report.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Reports – Export HTML, verify pass/fail, and compare revisions</p>
-        </div>
-        <div class="video-card fade-in">
-            <video controls poster="help_screenshots/settings.png" preload="metadata">
-                <source src="help_videos/settings.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p>Settings – Customise detectors and shop‑specific thresholds</p>
-        </div>
-    </div>
-    <p style="text-align:center; color:#94a3b8; font-size:0.85rem; margin-top:1rem;">
-        All videos are short, offline‑friendly MP4 files. Click to play right here.
-    </p>
+    <p style="margin-top:1rem; font-size:0.85rem; color:#94a3b8;">384 MB · Windows 10/11 · No installation · 100% offline</p>
   </section>
 
-  <!-- ── Original three features ── -->
+  <!-- WHAT FORGE DOES -->
   <section class="section">
-    <h2>Engineered from first principles. Verified at every face.</h2>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔍</div>
-        <h3>Face‑Level Traceability</h3>
-        <p>Every issue links to a specific CAD face with an exact measurement.</p>
+    <h2 style="text-align:center; color:#00e5ff;">What FORGE Does</h2>
+    <div class="feature-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:2rem;">
+      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
+        <h3 style="color:#00e5ff;">Detects Constraints</h3>
+        <p>Identifies manufacturability issues directly from your CAD geometry – thin walls, deep pockets, hole limits, tool access.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🛡️</div>
-        <h3>13 Manufacturing Detectors</h3>
-        <p>Planar Thin‑Walls, holes, Cylindrical Thin‑Wall, Small Internal Radii, Deep pockets, Undercuts, Draft angles, Rib / Boss / Web, Edge Classifier, Hole‑Edge Proximity, AM Support, Setup Feasibility, Tolerance Sensitivity</p>
+      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
+        <h3 style="color:#00e5ff;">Explains Why</h3>
+        <p>Shows the exact physical and geometric reason behind every issue. No black boxes, just deterministic measurements.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚙️</div>
-        <h3>5 Process Modes</h3>
-        <p>Machining, Molding, Casting, Sheet Metal, Additive. Each with custom thresholds.</p>
+      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
+        <h3 style="color:#00e5ff;">Recommends Improvements</h3>
+        <p>Gives clear, actionable guidance – increase thickness to a specific value, widen a pocket, or use a different machining strategy.</p>
       </div>
     </div>
   </section>
-  <!-- ── Axiom Structural Intelligence ── -->
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <h2 style="text-align:center; color:#00e5ff;">How It Works</h2>
+    <div style="max-width:600px; margin:2rem auto; text-align:center; font-size:1.1rem; color:#d1d5db; line-height:2.5;">
+      <p>Upload your STEP file</p>
+      <p style="color:#00e5ff; font-size:2rem; line-height:1;">↓</p>
+      <p>FORGE analyzes the exact B‑Rep geometry</p>
+      <p style="color:#00e5ff; font-size:2rem; line-height:1;">↓</p>
+      <p>Issues are detected and measured against your chosen process</p>
+      <p style="color:#00e5ff; font-size:2rem; line-height:1;">↓</p>
+      <p>You receive a three‑domain report with precise, trustworthy recommendations</p>
+    </div>
+  </section>
+
+  <!-- WHY ENGINEERS USE FORGE -->
   <section class="section">
-    <h2>Now with Axiom Structural Intelligence</h2>
-    <p style="text-align:center; color:#94a3b8; max-width:800px; margin:0 auto 2rem;">
-      TIXAN v1.2.6 doesn’t just find manufacturability issues – it traces force flow, computes exact
-      deflection & stress, and gives you physics‑backed design fixes. All offline. No mesh.
-    </p>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔗</div>
-        <h3>Load Path Tracing</h3>
-        <p>Automatically discover how force moves from the applied load through the part to the supports.
-           Every path is ranked by confidence and highlights the weakest structural link.</p>
+    <h2 style="text-align:center; color:#00e5ff;">Why Engineers Use FORGE</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:2rem; text-align:left;">
+      <div style="padding:1rem;">
+        <h3 style="color:#00e5ff;">Earlier visibility</h3>
+        <p>Find DFM issues before CAM, before the shop floor.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚡</div>
-        <h3>Deterministic Physics Engine</h3>
-        <p>Deflection, von Mises stress, safety factor, buckling, and natural frequency – computed from
-           closed‑form engineering formulas using your exact CAD geometry.</p>
+      <div style="padding:1rem;">
+        <h3 style="color:#00e5ff;">Faster decisions</h3>
+        <p>Spend minutes instead of hours investigating design problems.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">💡</div>
-        <h3>Verified Design Suggestions</h3>
-        <p>Get concrete, equation‑backed recommendations like “increase thickness of face 32 from 1.0 mm
-           to 1.5 mm to reduce deflection by 70%”. Each move is automatically checked for feasibility.</p>
+      <div style="padding:1rem;">
+        <h3 style="color:#00e5ff;">Greater confidence</h3>
+        <p>Every recommendation is traceable to a measurement and a physics formula.</p>
       </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🎛️</div>
-        <h3>Interactive Controls</h3>
-        <p>Adjust force magnitude, change material (Steel / Aluminum / Titanium / ABS), or click any face
-           on the 3D model to define exactly where the load is applied or where the part is clamped.</p>
+      <div style="padding:1rem;">
+        <h3 style="color:#00e5ff;">100% offline</h3>
+        <p>Your CAD files never leave your machine.</p>
       </div>
     </div>
   </section>
-  <!-- ── NEW: Designed for Trust section ── -->
-  <section class="section">
-    <h2>Designed for Trust. Built for the Shop Floor.</h2>
-    <div class="feature-grid">
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🧠</div>
-        <h3>Adaptive Shop‑Brain</h3>
-        <p>
-          TIXAN learns from your shop’s decisions. Mark any issue as accepted and the system remembers – 
-          automatically adjusting severity over time. No cloud, no external servers. Your shop’s intelligence 
-          stays with you, making each report smarter than the last.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔬</div>
-        <h3>Physics‑Based Heuristics</h3>
-        <p>
-          Every recommendation is grounded in real‑world physics, not guesswork. Cantilever deflection, 
-          tool stick‑out limits, hole‑edge breakout – all calculated from exact geometry. You get manufacturing 
-          advice you can trust, backed by measurable first‑principle reasoning.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📈</div>
-        <h3>Manufacturing Maturity Score</h3>
-        <p>
-          A single number from 1 to 10 that rates how production‑ready your part is. Combines criticality, 
-          count of issues, and process‑specific thresholds into an instant readiness indicator. 
-          No interpretation needed – know in seconds if your design is shop‑ready.
-        </p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📄</div>
-        <h3>Interactive Modern Report</h3>
-        <p>
-          Export a self‑contained HTML report with a full analytics dashboard, severity breakdown, 
-          design‑change simulator, and issue register. Print to PDF or share offline – the report is 
-          styled for clarity and built to support real shop‑floor decisions.
-        </p>
-      </div>
-    </div>
+
+  <!-- FINAL CTA -->
+  <section class="section" style="text-align:center;">
+    <h2 style="color:#00e5ff;">FORGE – Free Early Access</h2>
+    <p style="font-size:1.1rem; color:#9ca3af; margin-bottom:1.5rem;">Full functionality. No time limit. Start verifying your designs today.</p>
+    <a href="download.html" class="btn" style="background:#00e5ff; color:#0f172a; padding:0.8rem 2rem; border-radius:5px; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Download FORGE</a>
   </section>
 
   <footer>
@@ -255,9 +143,5 @@
     <p><small>This site does not use cookies or collect personal data.</small></p>
   </footer>
   <script src="script.js"></script>
-<div id="sticky-download">
-    <span>🔧 TIXAN is hear to help you catch DFM mistakes before machining</span>
-    <a href="download.html" class="btn">Download for Windows</a>
-</div>
 </body>
 </html>
