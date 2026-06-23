@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Contact the TIXAN team for support, feedback, or business inquiries. Use our contact form or email us directly.">
-  <meta name="keywords" content="TIXAN contact, support, feedback, manufacturing intelligence, contact form">
+  <meta name="description" content="Contact the FORGE team for support, feedback, or business inquiries.">
+  <meta name="keywords" content="FORGE contact, support, feedback, manufacturing intelligence">
   <meta name="author" content="TIXAN">
   <meta name="robots" content="index, follow">
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Contact TIXAN – Get in Touch">
-  <meta property="og:description" content="Contact the TIXAN team for support, feedback, or business inquiries. Use our contact form or email us directly.">
+  <meta property="og:title" content="Contact FORGE – Get in Touch">
+  <meta property="og:description" content="Contact the FORGE team for support, feedback, or business inquiries.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/contact.html">
-  <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
-  <title>Contact TIXAN – Get in Touch</title>
+  <title>Contact FORGE – Get in Touch</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,77 +22,73 @@
     gtag('config', 'G-0Y6SENL8BB');
   </script>
 </head>
-</head>
 <body>
   <header>
-    <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
-          <stop offset="0%" stop-color="#f8fafc"/>
-          <stop offset="25%" stop-color="#e2e8f0"/>
-          <stop offset="50%" stop-color="#cbd5e1"/>
-          <stop offset="70%" stop-color="#94a3b8"/>
-          <stop offset="100%" stop-color="#475569"/>
-        </linearGradient>
-        <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
-          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-          <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <!-- Metallic T -->
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
-      <!-- TIXAN Text -->
-      <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
-    </svg>
+    <div class="brand">
+      <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
+            <stop offset="0%" stop-color="#f8fafc"/>
+            <stop offset="25%" stop-color="#e2e8f0"/>
+            <stop offset="50%" stop-color="#cbd5e1"/>
+            <stop offset="70%" stop-color="#94a3b8"/>
+            <stop offset="100%" stop-color="#475569"/>
+          </linearGradient>
+          <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
+          </linearGradient>
+        </defs>
+        <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
+        <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
+      </svg>
+      <div class="brand-sub">FORGE</div>
+    </div>
     <div class="hamburger"><span></span><span></span><span></span></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="features.html">Features</a>
+      <a href="capabilities.html">Capabilities</a>
       <a href="download.html">Download</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
-  <section class="section">
-    <h2>Get in touch</h2>
-    <div class="contact-form fade-in">
-      <form id="contact-form">
-        <input type="text" id="name" name="name" placeholder="Your name" required>
-        <input type="email" id="email" name="email" placeholder="Your email" required>
-        <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
-        <button type="submit" class="btn" id="submit-btn">Copy Email & Message</button>
-      </form>
-      <p id="status-message" style="text-align:center; margin-top:1rem; font-size:0.9rem; color:#10b981; display:none;">
-        ✅ Email address copied! Send your message to <strong>ngenoabraham001@gmail.com</strong>
-      </p>
-      <p style="text-align:center; margin-top:0.5rem; font-size:0.85rem; color:#9ca3af;">
-        Or email us directly: <a href="mailto:ngenoabraham001@gmail.com">ngenoabraham001@gmail.com</a>
-      </p>
-    </div>
+  <section class="hero">
+    <h1>Get in touch</h1>
+  </section>
+
+  <section class="section contact-form">
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your message"></textarea>
+      <button type="submit" class="btn-primary" id="submit-btn">Copy Email & Message</button>
+    </form>
+    <p id="status-message" class="status-message">✅ Email address copied! Send your message to <strong>ngenoabraham001@gmail.com</strong></p>
+    <p class="direct-email">Or email us directly: <a href="mailto:ngenoabraham001@gmail.com">ngenoabraham001@gmail.com</a></p>
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="features.html">Features</a> |
-      <a href="download.html">Download</a> |
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="download.html">Download</a>
       <a href="contact.html">Contact</a>
     </div>
     <p>&copy; 2026 TIXAN. Built for engineers, by engineers.</p>
     <p><small>This site does not use cookies or collect personal data.</small></p>
   </footer>
-
+  <script src="script.js"></script>
   <script>
     const contactEmail = 'ngenoabraham001@gmail.com';
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       navigator.clipboard.writeText(contactEmail).then(function() {
         const statusMsg = document.getElementById('status-message');
-        statusMsg.innerHTML = '✅ Email address copied! Send your message to <strong>' + contactEmail + '</strong>';
         statusMsg.style.display = 'block';
         const btn = document.getElementById('submit-btn');
         const originalText = btn.textContent;
@@ -109,6 +101,5 @@
       });
     });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
