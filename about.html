@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TIXAN is a deterministic, offline manufacturing intelligence system. Face‑level analysis for STEP and STL files – no AI, no cloud, just geometry you can verify.">
-  <meta name="keywords" content="TIXAN, about, manufacturing intelligence, mission, offline CAD analysis, deterministic geometry, STEP, STL">
+  <meta name="description" content="FORGE is a deterministic, offline desktop tool that answers whether a part can withstand physical reality before machining.">
+  <meta name="keywords" content="FORGE, about, manufacturing intelligence, offline CAD analysis, deterministic, geometry">
   <meta name="author" content="TIXAN">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="About TIXAN – Deterministic, Offline Manufacturing Intelligence">
-  <meta property="og:description" content="Face‑level manufacturability analysis for STEP and STL files. No cloud – physics‑based heuristics and shop‑specific learning you can trust.">
+  <meta property="og:title" content="About FORGE – Built for the Shop Floor">
+  <meta property="og:description" content="FORGE speaks three languages: manufacturability, structural integrity, and lifecycle – all from your exact CAD geometry.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/about.html">
-  <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
-  <title>About TIXAN – Deterministic Manufacturing Intelligence</title>
+  <title>About FORGE – Built for the Shop Floor</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -25,76 +24,72 @@
 </head>
 <body>
   <header>
-    <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
-          <stop offset="0%" stop-color="#f8fafc"/>
-          <stop offset="25%" stop-color="#e2e8f0"/>
-          <stop offset="50%" stop-color="#cbd5e1"/>
-          <stop offset="70%" stop-color="#94a3b8"/>
-          <stop offset="100%" stop-color="#475569"/>
-        </linearGradient>
-        <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
-          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
-          <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
-          <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
-        </linearGradient>
-      </defs>
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
-      <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
-      <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
-    </svg>
+    <div class="brand">
+      <svg class="tixan-logo" viewBox="0 0 500 80" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="metalGrad" x1="20%" y1="10%" x2="80%" y2="95%">
+            <stop offset="0%" stop-color="#f8fafc"/>
+            <stop offset="25%" stop-color="#e2e8f0"/>
+            <stop offset="50%" stop-color="#cbd5e1"/>
+            <stop offset="70%" stop-color="#94a3b8"/>
+            <stop offset="100%" stop-color="#475569"/>
+          </linearGradient>
+          <linearGradient id="shineGrad" x1="15%" y1="5%" x2="70%" y2="80%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="35%" stop-color="#f1f5f9" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
+          </linearGradient>
+        </defs>
+        <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
+        <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
+      </svg>
+      <div class="brand-sub">FORGE</div>
+    </div>
     <div class="hamburger"><span></span><span></span><span></span></div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="features.html">Features</a>
+      <a href="capabilities.html">Capabilities</a>
       <a href="download.html">Download</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="section" style="text-align:center;">
-    <h1 style="color:#00e5ff;">Built for the Shop Floor, Not the Cloud</h1>
-    <p style="font-size:1.2rem; color:#9ca3af; max-width:800px; margin:1.5rem auto;">
-      FORGE is a mesh‑free, offline desktop tool that answers “Can I make this part?” before a single chip is cut. It speaks three languages: manufacturability, structural integrity, and lifecycle – all from your exact CAD geometry.
-    </p>
+  <section class="hero">
+    <h1>Built for the Shop Floor</h1>
+    <p>FORGE is a mesh‑free, offline desktop tool that answers “Can it withstand physical reality?” before a single chip is cut. It speaks three languages: manufacturability, structural integrity, and lifecycle – all from your exact CAD geometry.</p>
   </section>
 
-  <!-- THREE DOMAINS -->
   <section class="section">
-    <h2 style="text-align:center; color:#00e5ff;">The Three‑Domain Truth Layer</h2>
-    <div class="feature-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:2rem;">
-      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
-        <h3 style="color:#00e5ff;">Manufacturability</h3>
+    <h2>The Three‑Domain Truth Layer</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Manufacturability</h3>
         <p>Face‑level machining checks: thin walls, holes, deep pockets, tool access. Recommendations based on your chosen process limits.</p>
       </div>
-      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
-        <h3 style="color:#00e5ff;">Structural Integrity</h3>
-        <p>Deterministic cantilever model. Deflection, safety factor, buckling. Exact required thickness to withstand your shop’s cutting force and material. No mesh, no AI – pure closed‑form physics.</p>
+      <div class="card">
+        <h3>Structural Integrity</h3>
+        <p>Deterministic cantilever model. Deflection, safety factor, buckling. Exact required thickness to withstand your shop’s cutting force and material.</p>
       </div>
-      <div class="feature-card" style="background:#1f2937; padding:2rem; border-radius:8px; border:1px solid #374151;">
-        <h3 style="color:#00e5ff;">Lifecycle</h3>
+      <div class="card">
+        <h3>Lifecycle</h3>
         <p>Fatigue limit vs. applied stress. Know if your part will survive repeated use. Material‑aware, safety‑factor‑driven. Catch endurance risks before they become warranty claims.</p>
       </div>
     </div>
   </section>
 
-  <!-- CLOSING STATEMENT -->
-  <section class="section" style="text-align:center;">
-    <p style="font-size:1.1rem; color:#9ca3af; max-width:800px; margin:0 auto;">
-      TIXAN was designed from grounded engineering truth to be a key verifier before the CAD is brought to physical reality – a reliable, offline tool that answers “Can I make this part?” before a single chip is cut.
-    </p>
-    <a href="download.html" class="btn" style="background:#00e5ff; color:#0f172a; padding:0.8rem 2rem; border-radius:5px; font-weight:700; text-transform:uppercase; letter-spacing:1px; display:inline-block; margin-top:2rem;">Download for Windows</a>
+  <section class="cta">
+    <a href="download.html" class="btn-primary">Download for Windows</a>
+    <span class="caption">384 MB · Windows 10/11 · No installation · 100% Offline</span>
   </section>
 
   <footer>
     <div class="footer-links">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="features.html">Features</a> |
-      <a href="download.html">Download</a> |
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="capabilities.html">Capabilities</a>
+      <a href="download.html">Download</a>
       <a href="contact.html">Contact</a>
     </div>
     <p>&copy; 2026 TIXAN. Built for engineers, by engineers.</p>
