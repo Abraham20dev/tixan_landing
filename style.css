@@ -362,3 +362,13 @@ video {
 }
   filter: invert(1);
 }
+/* Modern kinetic‑cyan accents */
+.hero h1, .section h1, .section h2 {
+  color: #00e5ff;
+  letter-spacing: -0.5px;
+}
+.hero p, .section p {
+  color: #cbd5e1;
+}
+
+
