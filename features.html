@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore TIXAN's 13 manufacturing detectors, 5 process modes, severity‑ranked reports, and shop‑specific learning. 100% offline desktop and private.">
-  <meta name="keywords" content="TIXAN features, manufacturing detectors, manufacturability, face‑level traceability, process modes, CAD analysis, DFM, offline CAD">
+  <meta name="description" content="Explore FORGE’s capabilities: exact B‑Rep geometry, deterministic physics, and real 3‑axis machining limits.">
+  <meta name="keywords" content="FORGE features, exact geometry, deterministic physics, manufacturing reality, mesh‑free CAD">
   <meta name="author" content="TIXAN">
   <meta name="robots" content="index, follow">
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="TIXAN Features – 13 Detectors, Face‑Level Traceability &amp; Process Modes">
-  <meta property="og:description" content="Explore TIXAN's 13 manufacturing detectors, 5 process modes, severity‑ranked reports, and shop‑specific learning. 100% offline desktop and private.">
+  <meta property="og:title" content="FORGE Features – Exact Geometry, Deterministic Physics, Manufacturing Reality">
+  <meta property="og:description" content="FORGE reads your STEP file directly, applies closed‑form physics, and speaks the real limits of 3‑axis machining.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abraham20dev.github.io/tixan_landing/features.html">
   <meta property="og:image" content="https://abraham20dev.github.io/tixan_landing/screenshots/dashboard.png">
-  <title>TIXAN Features – 13 Detectors, Face‑Level Traceability &amp; Process Modes</title>
+  <title>FORGE Features – Exact Geometry, Deterministic Physics, Manufacturing Reality</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y6SENL8BB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -43,10 +40,8 @@
           <stop offset="100%" stop-color="#64748b" stop-opacity="0.35"/>
         </linearGradient>
       </defs>
-      <!-- Metallic T -->
       <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#metalGrad)" stroke="#334155" stroke-width="6" stroke-linejoin="round"/>
       <path d="M5 5 H120 V30 H85 V75 H40 V30 H5 Z" fill="url(#shineGrad)" opacity="0.85"/>
-      <!-- TIXAN Text -->
       <text x="145" y="65" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#e2e8f0" stroke="#0f172a" stroke-width="6" paint-order="stroke">TIXAN</text>
     </svg>
     <div class="hamburger"><span></span><span></span><span></span></div>
@@ -59,83 +54,36 @@
     </nav>
   </header>
 
-  <section class="section">
-    <h2>Manufacturing Intelligence &amp; Structural Physics</h2>
-    <div class="feature-grid">
-      <!-- Original cards (abbreviated for clarity – keep all existing text) -->
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔍</div>
-        <h3>Face‑Level Traceability</h3>
-        <p>Every detected issue is pinned to a specific CAD face with an exact measurement – no black boxes.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🛡️</div>
-        <h3>13 Manufacturing Detectors</h3>
-        <p>Thin walls, holes, small radii, deep pockets, undercuts, draft, ribs/bosses, edges, hole‑edge proximity, AM support, setup feasibility, and tolerance sensitivity – all covered.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚙️</div>
-        <h3>5 Process Modes</h3>
-        <p>Machining, Molding, Casting, Sheet Metal, and Additive. Each mode applies custom thresholds and physics heuristics for accurate, process‑specific feedback.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📊</div>
-        <h3>Severity‑Ranked Reports & Interactive Dashboard</h3>
-        <p>Critical, High, Medium, Low – grouped issues, Top‑10 risks, executive summary. The interactive HTML report includes a readiness gauge, severity bars, and a design‑change simulator.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🧠</div>
-        <h3>Adaptive Shop‑Brain</h3>
-        <p>Override thresholds and mark issues as accepted. TIXAN remembers your choices and automatically softens future severities. Your shop’s knowledge stays local and private.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔐</div>
-        <h3>100% Offline & Private</h3>
-        <p>Your CAD data never leaves your machine. No cloud, no internet required. Every analysis runs entirely on‑device, preserving your intellectual property.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔬</div>
-        <h3>Physics‑Based Heuristics</h3>
-        <p>Recommendations are calculated from first‑principle formulas – cantilever deflection, tool reach, breakout risk – not from statistical models or AI. Pure, verifiable engineering.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📈</div>
-        <h3>Manufacturing Maturity Score</h3>
-        <p>A 1‑10 rating that instantly communicates how close your part is to production readiness. Combines issue severity, count, and process thresholds into one trusted number.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🖥️</div>
-        <h3>3D Heatmap & Inspection Tools</h3>
-        <p>View face‑coloured risk maps, click‑to‑highlight any issue, toggle wireframe, and draw clip‑plane regions. The built‑in viewer gives you full visual control.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">📁</div>
-        <h3>Export & Compliance</h3>
-        <p>Generate pass/fail certificates, revision comparison reports, and a shareable summary snippet. All exports are standalone HTML – no viewer needed.</p>
-      </div>
+  <!-- HERO -->
+  <section class="section" style="text-align:center;">
+    <h1 style="color:#00e5ff;">FORGE doesn’t guess. It measures, computes, and tells you the truth.</h1>
+    <p style="font-size:1.2rem; color:#9ca3af; max-width:800px; margin:1.5rem auto;">
+      Every recommendation is traced to an exact CAD face, a closed‑form physics formula, and the limits of your chosen manufacturing process.
+    </p>
+  </section>
 
-      <!-- ── NEW Axiom cards ── -->
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🔗</div>
-        <h3>Load Path Tracing</h3>
-        <p>See exactly how force travels through your part – from the applied load to the clamping points. Every path comes with a confidence score and highlights the weakest structural link.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">⚡</div>
-        <h3>Deterministic Structural Physics</h3>
-        <p>Deflection, von Mises stress, safety factor, buckling, and natural frequency – all computed from closed‑form engineering formulas. No mesh, no AI. Just real physics.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">💡</div>
-        <h3>Verified Design Moves</h3>
-        <p>Receive actionable, equation‑backed suggestions (“increase this face from 1.0 to 1.5 mm”) that are automatically checked against your geometry. Know exactly what to change and why.</p>
-      </div>
-      <div class="feature-card fade-in">
-        <div class="feature-icon">🎛️</div>
-        <h3>Interactive Physics Controls</h3>
-        <p>Drag a slider to change the applied force, pick a material from the dropdown, or click a face on the 3D model to set custom load / support points. Physics updates instantly.</p>
-      </div>
-    </div>
+  <!-- EXACT GEOMETRY -->
+  <section class="section" style="max-width:800px; margin:0 auto;">
+    <h2 style="color:#00e5ff;">Exact Geometry</h2>
+    <p style="font-size:1.1rem; color:#d1d5db; line-height:1.8;">
+      FORGE reads your STEP file directly from the B‑Rep surfaces. No tessellation, no mesh, no approximation errors. Every measurement – wall thickness, pocket depth, corner radius – is taken from the exact CAD geometry you designed. What you see in the report is the real dimension, not a degraded copy.
+    </p>
+  </section>
+
+  <!-- DETERMINISTIC PHYSICS -->
+  <section class="section" style="max-width:800px; margin:0 auto;">
+    <h2 style="color:#00e5ff;">Deterministic Physics</h2>
+    <p style="font-size:1.1rem; color:#d1d5db; line-height:1.8;">
+      Structural reasoning is built on closed‑form engineering formulas. Cantilever deflection, von Mises stress, safety factor, buckling, natural frequency. Material properties – yield strength, Young’s modulus, density – are used directly. No AI, no machine learning, no statistical inference. Every number is auditable: you can trace it back to the formula and the input values.
+    </p>
+  </section>
+
+  <!-- MANUFACTURING REALITY -->
+  <section class="section" style="max-width:800px; margin:0 auto;">
+    <h2 style="color:#00e5ff;">Manufacturing Reality</h2>
+    <p style="font-size:1.1rem; color:#d1d5db; line-height:1.8;">
+      FORGE applies the real limits of 3‑axis machining. It knows what a tool can reach, how deep a pocket can go with a given corner radius, and what wall thickness will deflect under your shop’s cutting force. When a geometry change is impractical, FORGE offers machining‑side alternatives: rest machining, long‑reach tools, reduced step‑down.
+    </p>
   </section>
 
   <footer>
