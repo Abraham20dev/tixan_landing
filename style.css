@@ -13,7 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Typography */
 h1, h2, h3 { font-weight: 700; letter-spacing: -0.5px; }
 h1 { font-size: clamp(2.5rem, 6vw, 4rem); color: #00E5FF; }
 h2 { font-size: 1.8rem; color: #00E5FF; margin-bottom: 1.5rem; }
@@ -36,19 +35,24 @@ header {
   top: 0;
   z-index: 100;
 }
-.brand { display: flex; align-items: baseline; gap: 8px; }
-.tixan-logo { height: 50px; width: auto; }
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.tixan-logo { height: 48px; width: auto; }
 .brand-sub {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 4px;
   color: #00E5FF;
   text-transform: uppercase;
-  margin-top: 4px;
+  margin-left: 4px;
 }
 
-/* Navigation as bold buttons */
+/* Navigation */
 nav { display: flex; gap: 0.5rem; }
 nav a {
   font-weight: 600;
@@ -200,7 +204,6 @@ nav a.active { background: #00E5FF; color: #0A0E13; }
   color: #64748B;
 }
 
-/* Ordered list */
 ol { padding-left: 1.5rem; }
 ol li { margin-bottom: 0.75rem; line-height: 1.6; }
 
@@ -216,7 +219,7 @@ footer a { color: #8899AA; margin: 0 0.5rem; }
 footer a:hover { color: #00E5FF; }
 .footer-links { margin-bottom: 1rem; }
 
-/* Fade‑in (keep existing logic) */
+/* Fade‑in */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
